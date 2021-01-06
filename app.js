@@ -2,6 +2,12 @@ import {createInput, createLabel, createDiv} from "./HTML";
 
 let result = document.getElementById('result');
 
-let textDeDiv = createDiv("Text de blabla pas commun!");
+createDiv("Text de blabla pas commun!", result);
 
-console.log(textDeDiv);
+createLabel('E-Mail', result);
+
+createInput('email', result);
+
+createLabel('Password:', result);
+
+createInput('password', result);

@@ -1,19 +1,20 @@
 export {createDiv, createLabel, createInput};
 
-function createDiv (text){
+function createDiv (text, parent){
     let createDiv = document.createElement('div');
-    createDiv.innerHTML = text;
+    parent.append(createDiv);
+    createDiv.innerHTML += text + "<br>";
 }
 
-function createInput (typeInput, value, text){
+function createInput (typeInput, parent){
     let createInput = document.createElement('input');
     createInput.type = typeInput;
-    createInput.value = value;
-    createInput.innerHTML = text;
+    parent.append(createInput);
 }
 
-function createLabel (text){
+function createLabel (text, parent){
     let createLabel = document.createElement('label');
     createLabel.innerHTML = text;
+    parent.append(createLabel);
 }
 
